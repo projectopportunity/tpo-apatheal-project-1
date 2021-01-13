@@ -70,10 +70,10 @@ const quotes = [
   
 // This function chooses a random background color. The randomBackgroundColor function will be called under the printQuote function
 function randomBackgroundColor() {
-  let red = Math.floor(Math.random()*256);
-  let blue = Math.floor(Math.random()*256);
-  let green = Math.floor(Math.random()*256);
-  let randomColor = `rgb(${red}, ${blue}, ${green})`
+  const red = Math.floor(Math.random()*256);
+  const blue = Math.floor(Math.random()*256);
+  const green = Math.floor(Math.random()*256);
+  const randomColor = `rgb(${red}, ${blue}, ${green})`
   document.body.style.background = randomColor;
 }
 
@@ -84,7 +84,7 @@ function randomBackgroundColor() {
 ***/
 // The getRandomQuote function below selects and returns a random quote object from the objects above. 
 function getRandomQuote() {
-  let randomQuote = Math.floor(Math.random() * quotes.length);
+  const randomQuote = Math.floor(Math.random() * quotes.length);
   return quotes[randomQuote];
 }
 
@@ -99,12 +99,12 @@ function printQuote() {
     html += `<p class = 'source'> ${theRandomQuote.source}`;
       
 //If statements test to see if the citation and/or year property is in the current theRandomQuote. If yes, then it adds it to the html string. 
-if("citation" in theRandomQuote) {
+  if("citation" in theRandomQuote) {
     html += `<span class = 'citation'>  ${theRandomQuote.citation} </span>`;
-}
-if("year" in theRandomQuote) {
+  }
+  if("year" in theRandomQuote) {
     html += `<span class = 'citation'>  ${theRandomQuote.year} </span>`
-}
+  }
     html += `<p class = 'tags'> ${theRandomQuote.tags}`;
     html += "</p>";
   
