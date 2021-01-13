@@ -11,7 +11,7 @@ project 1 - A Random Quote Generator
  * `quotes` array 
 ***/
 
-//Below is an array of Objects with the quote, source, citation, and year (if availble) as properties
+//Below is an array of Objects with the quote, source, citation, year (if availble), and tags as properties
 const quotes = [
   {
     quote:'Live all you can – it’s a mistake not to. It doesn’t so much matter what you do in particular, so long as you have your life.',
